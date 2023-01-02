@@ -1,0 +1,363 @@
+/* @media less than 768px according to README.md */
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #d9dcd6;
+}
+/*
+@media only screen and (max-width:768px) {
+
+}
+*/
+.header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #2a607c;
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        margin: auto;
+        justify-content: space-between;
+                        
+    }
+
+}
+
+/* by adding position fixed. I noticed that my ul li have go back to the the blue background */
+    
+
+.header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+.header h1 .seo {
+    color: #d9dcd6;
+}
+
+.header div {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.header div ul {
+    list-style-type: none;
+}
+
+.header div ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    .header div ul li {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+
+
+p {
+    font-size: 16px;
+}
+/*
+.hero {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/digital-marketing-meeting.jpg");
+    background-size: cover;
+    background-position: center;
+}
+*/
+/* Let see if I can fix this photo in the middle so the customer can see a full picture */
+/*
+@media only screen and (max-width: 768px) {
+    .hero {
+        background-image: url("../images/digital-marketing-meeting.jpg")
+        
+
+        
+    }
+}
+*/
+/* I added this to see if I can fit the image better later when resizing */
+
+
+.hero img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+/* adding object-fit: contain did make the image better. I got the reference from W3 */
+@media only screen and (max-width: 768px) {
+    .hero img {
+        height: 100%;
+        width: 100%;
+        margin-top: 0px;
+        object-fit: contain;
+        
+    }
+}
+
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
+
+.content {
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        padding: 0;
+        margin: 0;
+        padding-left: 15px;
+    }
+/* If I left it default, the benefit won't move upward */
+
+    
+}
+
+.benefits {
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;
+}
+/*
+@media only screen and(max-width: 768px) {
+    .benefits {
+        
+        
+        
+
+        
+        
+
+
+    }
+}
+*/
+.benefit-lead {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+.benefit-brand {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+.benefit-cost {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+    .benefit-lead,
+    .benefit-brand,
+    .benefit-cost {
+        width: auto;
+        text-align: center;
+        height: auto;
+        
+    }
+}
+
+.benefit-lead h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.benefit-brand h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.benefit-cost h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+/* After practicing Codecedemy, I noticed that I have to start using rem and em */
+
+@media only screen and (max-width: 768px) {
+    .benefit-brand h3,
+    .benefit-cost h3,
+    .benefit-lead h3 {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+.benefit-lead img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+.benefit-brand img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+.benefit-cost img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+@media only screen and (max-width: 768px) {
+    .benefit-brand img,
+    .benefit-cost img,
+    .benefit-lead img {
+        width: 113.3px; /* Used Inspect Q for this */
+    }
+}
+
+.search-engine-optimization {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+.online-reputation-management {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+.social-media-marketing {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 768px){
+    .search-engine-optimization,
+    .online-reputation-management,
+    .social-media-marketing {
+        position: relative;
+        
+        padding: 15px;
+        height: 367.8px;
+        
+
+        
+    }
+}
+
+.search-engine-optimization img {
+    max-height: 200px;
+}
+
+.online-reputation-management img {
+    max-height: 200px;
+}
+
+.social-media-marketing img {
+    max-height: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+    .search-engine-optimization img,
+    .online-reputation-management img,
+    .social-media-marketing img {
+        display: flex;
+        justify-items: flex-end;
+        
+    }
+}
+
+.search-engine-optimization h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.online-reputation-management h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.social-media-marketing h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+@media only screen and (max-width: 768px) {
+    .search-engine-optimization h2,
+    .online-reputation-management h2,
+    .social-media-marketing h2 {
+        display: flex;
+        justify-content: space-around;
+        font-size: 2.0rem;
+    }
+}
+    
+@media only screen and (max-width: 768px) {
+    .search-engine-optimization p,
+    .online-reputation-management p,
+    .social-media-marketing p {
+        font-size: 1.1rem;
+        
+    }
+}
+
+
+.footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 20px;
+}
